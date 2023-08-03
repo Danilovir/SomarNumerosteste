@@ -14,13 +14,13 @@ const App = () => {
 
   const handleSum = () => {
     const { input1 } = inputValues;
-    const result = parseInt(input1) + parseInt(input2) + parseInt(input3) + parseInt(input4) + parseInt(input5);
+    const result = parseInt(input1); //+ parseInt(input2) + parseInt(input3) + parseInt(input4) + parseInt(input5);
     setSum(result);
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}> digite Input 11:</Text>
+      <Text style={styles.label}> Input 1:</Text>
       <TextInput
         style={styles.input}
         onChangeText={(value) => handleInputChange('input1', value)}
@@ -31,7 +31,7 @@ const App = () => {
 
       <Button title="Somar" onPress={handleSum} />
 
-      <Text style={styles.result}>Resultado: {sum}</Text>
+      <Text style={styles.result}>Resultado da Soma: {sum}</Text>
     </View>
   );
 };
